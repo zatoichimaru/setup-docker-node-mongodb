@@ -1,0 +1,15 @@
+ola pessoal
+sejam todos bem vindos!
+hj vamos falar sobre docker!
+1 - Overview    
+    -oque é docker?
+        Docker é uma tecnologia que permite aos desenvolvedores empacotar, 
+        entregar e executar aplicações em containers Linux leves e autossuficientes
+    -como criar um Ambiente?
+    -oque é um container?
+        conjunto de dependencias da sua aplicação,
+        como por exemplo:
+            - nodejs
+            - mysql
+            - bibliotecas e etc
+    -oque é preciso saber para aprender docker?
