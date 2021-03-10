@@ -15,21 +15,22 @@ services:
             - db
         ports:
             - ${APP_PORT}:${APP_PORT}
-        working_dir: /usr/src/app
         command: npm run start
 
     db:
         image: mongo:latest
         container_name: db
         restart: always
+        env_file:
+            - .env
         ports:
-            - '${DB_PORT}:${DB_PORT}'
+            - '${DB_PORT}:27017'
         volumes:
-            - data-volume:/data/db
+            - dbdata-volume:/data/db
         environment:
             MONGO_INITDB_USERNAME: ${DB_USERNAME}
             MONGO_INITDB_PASSWORD: ${DB_PASSWORD}
             MONGO_INITDB_DATABASE: ${DB_DATABASE}
 
 volumes:
-    data-volume:
+    dbdata-volume:
